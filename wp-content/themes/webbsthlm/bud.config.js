@@ -23,7 +23,7 @@ export default async (app) => {
    *
    * @see {@link https://bud.js.org/reference/bud.setPublicPath}
    */
-  app.setPublicPath('/app/themes/sage/public/');
+  app.setPublicPath('/wp-content/themes/webbsthlm/public/');
 
   /**
    * Development server settings
@@ -34,7 +34,7 @@ export default async (app) => {
    */
   app
     .setUrl('http://localhost:3000')
-    .setProxyUrl('http://example.test')
+    .setProxyUrl('https://webst.test')
     .watch(['resources/views', 'app']);
 
   /**
@@ -51,9 +51,9 @@ export default async (app) => {
         backgroundImage: true,
       },
       color: {
-        custom: false,
+        custom: true,
         customDuotone: false,
-        customGradient: false,
+        customGradient: true,
         defaultDuotone: false,
         defaultGradients: false,
         defaultPalette: false,
@@ -68,13 +68,13 @@ export default async (app) => {
       },
       spacing: {
         padding: true,
+        margin: true,
         units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
       },
       typography: {
         customFontSize: false,
       },
     })
-    .useTailwindColors()
     .useTailwindFontFamily()
     .useTailwindFontSize();
 };
